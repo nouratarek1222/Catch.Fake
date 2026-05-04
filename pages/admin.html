@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="icon" href="../assets/faction.png">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <h2 class="logo-text">
+    <img src="../assets/logo.png" class="logo-img">
+    Catch <span>Fake</span>
+  </h2>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="admin.html" class="active">Admin</a>
+  </div>
+
+  <div class="user-box">
+    <img class="user-img">
+    <span id="userName"></span>
+    <a href="#" class="logout-btn" onclick="logout()">Logout</a>
+  </div>
+
+</nav>
+
+<!-- ADMIN -->
+<div class="dashboard">
+
+  <h1>Admin Panel</h1>
+
+  <p class="admin-subtitle">
+    Manage users and monitor system activity<br>
+    Track logins, analyze security events, and maintain system integrity
+  </p>
+
+  <!-- Cards -->
+  <div class="cards">
+
+    <div class="card">
+      <h3>Total Users</h3>
+      <p class="number" id="usersCount">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Total Logins</h3>
+      <p class="number" id="loginsCount">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Failed Attempts</h3>
+      <p class="number fake" id="failedCount">0</p>
+    </div>
+
+  </div>
+
+  <!-- Login Activity -->
+  <div class="table-section">
+
+    <h2> Login Activity</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Email</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="activityTable"></tbody>
+
+    </table>
+
+  </div>
+
+</div>
+<footer>
+        <p>© 2026 Catch Fake. All rights reserved.</p>
+    </footer>
+<!-- JS -->
+<script src="../js/auth.js"></script>
+<script src="../js/admin.js"></script>
+
+</body>
+</html>
+
+
+

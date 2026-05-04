@@ -1,0 +1,377 @@
+/* Center container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+/* Card (Glass Purple Effect) */
+.card {
+  width: 90%;
+  max-width: 380px;
+  padding: 40px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(40px);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.15),
+    rgba(128,0,128,0.25)
+  );
+  box-shadow: 0 0 60px rgba(128,0,128,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+/* Title (LOGIN) */
+.card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Labels */
+.card label {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Inputs */
+.card input {
+  width: 100%;
+
+  padding: 10px 16px; 
+  height: 38px;       
+  margin-bottom: 12px;
+  border-radius: 12px; 
+  border: none;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.3);
+}
+
+/* Button */
+.main-btn {
+  width:50%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    #4b006e,
+    #430246
+  );
+
+  color: orange;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,165,0,0.5);
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* password container */
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 10px 40px 10px 16px; 
+  height: 38px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 13px;
+}
+
+.hint {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* bar container */
+.strength {
+  width: 100%;
+  height: 5px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.login-link {
+  margin-top: 15px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+.login-link a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* bar */
+#strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* text */
+#strength-text {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* login link */
+.login-link {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.login-link a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+}
+.password-container {
+  position: relative;
+}
+.password-container input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+}
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+.toggle-eye:hover {
+  color: orange;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  border: 1px solid #00eaff;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+input {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.login-btn {
+  color: white !important;
+}
+.Toastify__toast::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  animation: progress 3s linear;
+}
+
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.Toastify__toast {
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-box input {
+  width: 100%;
+  padding: 12px 40px; 
+}
+.toggle-eye {
+  position: absolute;
+  right: 12px;  
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+/* subtitle */
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* input with icon */
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-box i {
+  position: absolute;
+  left: 12px;
+  color: #aaa;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 35px;
+}
+
+/* eye icon */
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* forgot */
+.forgot-password {
+  text-align: right;
+  margin: 8px 0;
+}
+
+.forgot-password a {
+  font-size: 13px;
+  color: #00eaff;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* divider */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: rgba(255,255,255,0.2);
+  position: absolute;
+  top: 50%;
+}
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+}
+.divider span {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    max-width: 350px;
+    padding: 25px 15px;
+    border-radius: 20px;
+  }
+  .card h2 {
+    font-size: 22px;
+  }
+  .main-btn {
+    width: 100%;
+  }
+}

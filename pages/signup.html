@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Catch Fake is an AI-powered platform that detects fake or manipulated images, and videos files. Upload your media and let artificial intelligence analyze and reveal the truth with confidence scores.">
+   <meta name="keywords" content="AI deepfake detection, fake image detection, AI media analysis, detect fake videos, deepfake detector, artificial intelligence security, fake media detection, Catch Fake project">
+  <meta name="author" content="Noura"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Sign Up</title>
+  <link rel="icon" href="../assets/faction.png">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+<nav class="navbar">
+
+  <!-- Logo -->
+  <h2 class="logo-text">
+    <img src="../assets/logo.png" class="logo-img">
+    Catch <span>Fake</span>
+  </h2>
+
+  <!-- Menu Button (mobile) -->
+  <div class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Links -->
+  <div class="nav-links" id="nav-links">
+
+    <!-- Close Button (mobile) -->
+    <div class="close-btn" id="close-btn" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <a href="../index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="goToDashboard()">Dashboard</a>
+    <a href="login.html" id="loginLink" class="login-btn">Log in</a>
+    <a href="signup.html" class="signup-btn">Sign up</a>
+
+  </div>
+
+</nav>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+  <!-- Signup -->
+  <div class="container">
+    <form class="card" id="signupForm">
+
+      <h2>Sign Up</h2>
+
+      <!-- Name -->
+      <label>Full Name</label>
+      <input type="text" id="name">
+
+      <!-- Email -->
+      <label>Email Address</label>
+      <input type="email" id="email">
+
+      <!-- Password -->
+      <label>Password</label>
+      <div class="password-container">
+  <input type="password" id="password">
+  <i class="fa-solid fa-eye toggle-eye"
+     onclick="togglePassword('password', this)"></i>
+
+
+</div>
+
+      <!-- Confirm Password -->
+      <label>Confirm Password</label>
+      <div class="password-container">
+  <input type="password" id="confirmPassword">
+  <i class="fa-solid fa-eye toggle-eye"
+     onclick="togglePassword('confirmPassword', this)"></i>
+</div>
+
+      <!-- Hint -->
+      <p class="hint">
+        Password must contain uppercase, lowercase, number and symbol
+      </p>
+
+      <!-- Error -->
+      <p class="error" id="errorMsg"></p>
+
+      <!-- Button -->
+      <button type="submit" class="main-btn">Create Account</button>
+
+      <!-- Login Link -->
+      <p class="login-link">
+        Already have an account?
+        <a href="login.html">LOGIN</a>
+      </p>
+
+    </form>
+  </div>
+<footer>
+        <p>© 2026 Catch Fake. All rights reserved.</p>
+    </footer>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
