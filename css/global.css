@@ -1,0 +1,371 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: url("../assets/bg.jpg") no-repeat center/cover;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Logo */
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.logo-text:hover .logo-img {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* Fake animation */
+.logo-text span {
+  background: linear-gradient(90deg, #ff00cc, #00eaff, #ff00cc);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGlow 3s linear infinite;
+}
+@keyframes moveGlow {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  transform: scale(1.05);
+}
+
+/* underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active */
+.nav-links a.active {
+  color: orange;
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* BUTTONS */
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ffd200, #ff7a18);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.login-btn::after {
+  display: none !important;
+}
+.login-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #ffd200, 0 0 20px #ff7a18;
+}
+.signup-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  color: white;
+  transition: 0.3s;
+}
+.signup-btn::after {
+  display: none !important;
+}
+.signup-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #7b2ff7, 0 0 20px #f107a3;
+}
+
+/* USER */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar */
+.user-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #00eaff;
+  transition: 0.3s;
+}
+.user-img:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 10px #00eaff,
+    0 0 20px #00eaff,
+    0 0 30px rgba(0, 234, 255, 0.5);
+}
+
+/* Username */
+#userName {
+  font-weight: bold;
+  transition: 0.3s;
+}
+#userName:hover {
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+/*LOGOUT */
+.logout-btn {
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: transparent;
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.logout-btn::after {
+  content: none !important;
+}
+
+/*  Hover */
+.logout-btn:hover {
+  background: rgba(167, 139, 250, 0.1);
+  color: white;
+  box-shadow:
+    0 0 10px rgba(167, 139, 250, 0.6),
+    0 0 20px rgba(167, 139, 250, 0.4);
+}
+
+/*  Click effect */
+.logout-btn:active {
+  transform: scale(0.92);
+}
+
+
+/*RESPONSIVE*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* Desktop */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu-toggle,
+.close-btn,
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100vh;
+    background: #111;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0; 
+  }
+
+  .close-btn {
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(190, 178, 178, 0.5);
+    display: none;
+    z-index: 999;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+.menu-toggle {
+  margin-left: auto;
+}
+
+/*TOAST*/
+
+.Toastify__toast {
+  animation: fadeInDown 0.5s ease, fadeOut 0.5s ease 2.5s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
+.Toastify__toast {
+  animation: shake 0.4s ease;
+}
+@keyframes fancyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  50% {
+    transform: translateY(5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.Toastify__toast {
+  animation: fancyIn 0.5s ease;
+}
+
+.forgot-password {
+  text-align: right;
+    margin-bottom: 5px;
+
+}
+
+.forgot-password a {
+  font-size: 13px;
+  color: #3096a3;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #ff00cc;
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:10px;
+font-size:13px;
+opacity:0.7;
+}
+
+.menu-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-user .user-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.menu-user .logout-btn {
+  width: 100%;
+  text-align: center;
+}
+

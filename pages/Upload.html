@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catch Fake is an AI-powered platform that detects fake or manipulated images, and videos files. Upload your media and let artificial intelligence analyze and reveal the truth with confidence scores.">
+    <meta name="keywords" content="AI deepfake detection, fake image detection, AI media analysis, detect fake videos, deepfake detector, artificial intelligence security, fake media detection, Catch Fake project">
+    <meta name="author" content="Malak"> 
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Upload Media-Catch Fake</title>
+    <link rel="icon" href="../assets/faction.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           <h2 class="logo-text">
+            <img src="../assets/image/logo.jpg" class="logo-img">
+                Catch <span>Fake</span>
+           </h2>
+            <div class="menu-toggle" id="menu-toggle">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+          <div class="nav-links" id="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="About.html">About</a>
+             <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn ">Log In</a>
+           </div>
+           <div id="user-nav" style="display:none;" >
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" onclick="logout()">Logout</a>
+           </div>
+        </nav>
+    </header>
+    <main>
+     <section class="upload-section">
+        <div class="upload-text">
+        <h2>Drag & Drop files here</h2>
+        <p>Upload Photos or Videos for analysis.</p>
+        </div>
+    </section>
+   <section class="upload2-section" id="drop-zone">
+<form id="upload-form" action="results.html" method="post" enctype="multipart/form-data">
+<div class="upload2-text">
+<h2 id="display-title">Drag & Drop files here</h2>
+<p id="file-name">Upload Photos or Videos for analysis.</p>
+</div>
+<input  type="file" name="media" id="file-input" hidden accept="image/*,video/*">
+<div class="upload-browse-files-btn">
+<button type="submit" class="upload2-btn" id="submit-btn">Upload</button> 
+<button type="submit" class="browse-btn" id="browse-btn">Browse Files</button></div>
+</form>
+<div id="progress-container" style="display: none; margin-top: 30px;">
+    <div class="progress-bar-bg">
+        <div id="progress-fill" class="progress-fill"></div>
+    </div>
+    <p id="progress-text" style="margin-top: 10px; color: #bf40ff; font-size: 0.9rem;">Analyzing Media... 0%</p>
+</div>
+</section>
+    </main>
+   <footer>
+        <p>© 2026 Catch Fake. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+  <script src="../js/script.js"></script>
+    </body>
+    </html>

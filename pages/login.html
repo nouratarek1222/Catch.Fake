@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="icon" href="../assets/faction.png">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+
+  <h2 class="logo-text">
+    <img src="../assets/logo.png" class="logo-img">
+    Catch <span>Fake</span>
+  </h2>
+
+  <!-- Menu Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Links -->
+  <div class="nav-links" id="nav-links">
+
+    <!-- Close -->
+    <div class="close-btn" id="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <a href="../">Home</a>
+    <a href="About.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="goToDashboard()">Dashboard</a>
+    <a href="login.html" class="login-btn active">Log in</a>
+    <a href="signup.html" class="signup-btn">Sign up</a>
+
+  </div>
+
+</nav>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Login Section -->
+
+
+<div class="container">
+
+  <form class="card" id="loginForm" autocomplete="off">
+
+    <!-- Title -->
+    <h2>Welcome Back!</h2>
+    <p class="subtitle">Login to your account and continue</p>
+
+    <!-- Email -->
+    <label>Email address</label>
+    <input type="email" id="email" placeholder="Enter your email" autocomplete="off">
+
+    <!-- Password -->
+    <label>Password</label>
+
+    <div class="password-container">
+      <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="new-password">
+      <i class="fa-solid fa-eye toggle-eye"
+         onclick="togglePassword('loginPassword', this)"></i>
+    </div>
+
+    <!-- Forgot -->
+    <p class="forgot-password">
+      <a href="forgot.html">Forgot Password? </a>
+    </p>
+
+    <!-- Error -->
+    <p class="error" id="errorMsg"></p>
+
+    <!-- Button -->
+    <button type="submit" class="main-btn" id="loginBtn">
+      SIGN IN
+    </button>
+
+    <!-- OR -->
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <!-- Link -->
+    <p class="login-link">
+      Don't have an account?
+      <a href="signup.html">SIGN UP</a>
+    </p>
+  </form>
+</div>
+<footer>
+        <p>© 2026 Catch Fake. All rights reserved.</p>
+    </footer>
+<!-- JS -->
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+</html>
